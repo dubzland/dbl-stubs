@@ -1,0 +1,40 @@
+{
+  "name": "hbl-stubs",
+  "version": "0.0.1",
+  "description": "Command/function stubs for bats",
+  "homepage": "https://git.dubzland.net/holodekk/hbl-stubs",
+  "license": "MIT",
+  "author": "Josh Williams (https://git.dubzland.net)",
+  "repository": "https://git.dubzland.net/holodekk/hbl-stubs",
+  "bugs": "https://git.dubzland.net/holodekk/hbl-stubs/issues",
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "files": [
+    "load.bash",
+    "src"
+  ],
+  "scripts": {
+    "test": "bats test"
+  },
+  "devDependencies": {
+    "bats": "^1",
+    "bats-support": "^0.3"
+  },
+  "peerDependencies": {
+    "bats": "0.4 || ^1",
+    "bats-support": "^0.3"
+  },
+  "keywords": [
+    "bats",
+    "bash",
+    "shell",
+    "test",
+    "unit",
+    "assert",
+    "assertion",
+    "helper",
+    "stub"
+  ]
+}
