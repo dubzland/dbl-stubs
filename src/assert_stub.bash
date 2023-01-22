@@ -3,7 +3,7 @@ assert_stub() {
 	[[ $# -eq 0 ]] ||
 		fail "too man arguments to assert_stub_invoked: [$function_name $@]." \
 				"Did you mean assert_stub_invoked_with_args()?"
-	if ! stub_was_invoked $function_name; then
+	if ! _stub_was_invoked $function_name; then
 		fail "stub not invoked: ${function_name}"
 	fi
 }
