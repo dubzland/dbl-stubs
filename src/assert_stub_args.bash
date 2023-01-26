@@ -5,7 +5,7 @@ assert_stub_args() { local function_name="${1:?function name is required}"; shif
 	if [[ $# -eq ${#actual_args[@]} ]]; then
 		for (( idx=0; idx < $#; idx++ )); do
 			arg=$((idx+1))
-			if [[ "${actual_args[$idx]}" != "${!arg}" ]]; then
+			if [[ "${actual_args[$idx]}" != "${!arg}" && "${!arg}" != _anything_ ]]; then
 				args_equal=0
 				break
 			fi
