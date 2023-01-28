@@ -1,0 +1,17 @@
+---
+image:
+  name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:19-alpine
+
+services:
+  - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:20.10-dind
+    alias: docker
+
+stages:
+  - test
+
+test:
+  stage: test
+  before_script:
+    - npm ci
+  script:
+    - BATS_LIB_PATH="$PWD/node_modules" npm test
