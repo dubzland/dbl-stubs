@@ -1,6 +1,5 @@
 ---
 image:
-  name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:19-alpine
 
 services:
   - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:20.10-dind
@@ -9,8 +8,10 @@ services:
 stages:
   - test
 
-test:
+test4.4:
   stage: test
+  image:
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/hbl-testing-image:4.4
   before_script:
     - npm ci
     - ls -al
