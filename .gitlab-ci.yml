@@ -12,7 +12,7 @@ stages:
 test4.4:
   stage: test
   image:
-    name: holodekk/hbl-testing-image:4.4
+    name: gitlab-registry.dubzland.net/holodekk/hbl-testing-image:4.4
   before_script:
     - npm ci
     - ls -al
