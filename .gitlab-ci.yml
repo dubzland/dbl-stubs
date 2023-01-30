@@ -1,6 +1,4 @@
 ---
-image:
-
 services:
   - name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:20.10-dind
     alias: docker
