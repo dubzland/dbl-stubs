@@ -12,7 +12,7 @@ test:
   stage: test
   parallel:
     matrix:
-      - BASH_VERSION: ["4.4", "5.0", "5.1", "5.2"]
+      - BASH_VERSION: ['4.4', '5.0', '5.1', '5.2']
   image:
     name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/bash:${BASH_VERSION}
   before_script:
@@ -20,39 +20,3 @@ test:
     - npm ci --cache .npm --prefer-offline
   script:
     - BATS_LIB_PATH="${PWD}/node_modules" npm test
-
-# test4.4:
-#   stage: test
-#   image:
-#     name: gitlab-registry.dubzland.net/holodekk/hbl-testing-image:4.4
-#   before_script:
-#     - npm ci --cache .npm --prefer-offline
-#   script:
-#     - BATS_LIB_PATH="$PWD/node_modules" npm test
-
-# test5.0:
-#   stage: test
-#   image:
-#     name: gitlab-registry.dubzland.net/holodekk/hbl-testing-image:5.0
-#   before_script:
-#     - npm ci --cache .npm --prefer-offline
-#   script:
-#     - BATS_LIB_PATH="$PWD/node_modules" npm test
-
-# test5.1:
-#   stage: test
-#   image:
-#     name: gitlab-registry.dubzland.net/holodekk/hbl-testing-image:5.1
-#   before_script:
-#     - npm ci --cache .npm --prefer-offline
-#   script:
-#     - BATS_LIB_PATH="$PWD/node_modules" npm test
-
-# test5.2:
-#   stage: test
-#   image:
-#     name: gitlab-registry.dubzland.net/holodekk/hbl-testing-image:5.2
-#   before_script:
-#     - npm ci --cache .npm --prefer-offline
-#   script:
-#     - BATS_LIB_PATH="$PWD/node_modules" npm test
