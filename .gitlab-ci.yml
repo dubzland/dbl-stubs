@@ -2,14 +2,13 @@
 stages:
   - test
 
-cache:
-  key: npm
-  policy: pull-push
-  paths:
-    - .npm/
-
 test:
   stage: test
+  cache:
+    key: npm
+    policy: pull-push
+    paths:
+      - .npm/
   parallel:
     matrix:
       - BASH_VERSION: ['4.4', '5.0', '5.1', '5.2']
