@@ -12,9 +12,9 @@ test:
   stage: test
   parallel:
     matrix:
-      - bash_version: [4.4, 5.0, 5.1, 5.2]
+      - BASH_VERSION: [4.4, 5.0, 5.1, 5.2]
   image:
-    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/bash:${bash_version}
+    name: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/bash:${BASH_VERSION}
   before_script:
     - apk add --update-cache npm
     - npm ci --cache .npm --prefer-offline
