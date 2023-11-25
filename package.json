@@ -1,12 +1,12 @@
 {
-  "name": "hbl-stubs",
+  "name": "dbl-stubs",
   "version": "0.0.1",
   "description": "Command/function stubs for bats",
-  "homepage": "https://git.dubzland.net/holodekk/hbl-stubs",
+  "homepage": "https://git.dubzland.com/dubzland/dbl-stubs",
   "license": "MIT",
-  "author": "Josh Williams (https://git.dubzland.net)",
-  "repository": "https://git.dubzland.net/holodekk/hbl-stubs",
-  "bugs": "https://git.dubzland.net/holodekk/hbl-stubs/issues",
+  "author": "Josh Williams (https://git.dubzland.com)",
+  "repository": "https://git.dubzland.com/dubzland/dbl-stubs",
+  "bugs": "https://git.dubzland.com/dubzland/dbl-stubs/issues",
   "directories": {
     "lib": "src",
     "test": "test"
